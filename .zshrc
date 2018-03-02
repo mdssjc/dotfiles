@@ -56,14 +56,18 @@ autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
-export MAVEN_HOME="$HOME/java/apache-maven-3.5.0/bin/"
-export CABAL_HOME="$HOME/.cabal/bin/"
-export BIN="$HOME/bin/"
-export LOCAL_BIN="$HOME/.local/bin/"
-export C_INCLUDE_PATH="/usr/lib/clang/4.0.1/"
-export RUBY_BIN="$HOME/.gem/ruby/2.4.0/bin/"
-export PATH="$PATH:$JAVA_HOME:$MAVEN_HOME:$CABAL_HOME:$BIN:$LOCAL_BIN:$C_INCLUDE_PATH:$RUBY_BIN"
+export CC="clang"
+export CFLAGS="-Ofast"
+
+export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
+export KOTLIN_HOME="$HOME/.sdkman/candidates/kotlin/current"
+export GRADLE_HOME="$HOME/.sdkman/candidates/gradle/current"
+export MAVEN_HOME="$HOME/.sdkman/candidates/maven/current"
+export LOCAL_BIN="$HOME/.local/bin"
+export STACK_HOME="$HOME/.stack"
+export C_INCLUDE_PATH="/usr/lib/clang/5.0.1"
+export RUBY_BIN="$HOME/.gem/ruby/2.4.0/bin"
+export PATH="$PATH:$JAVA_HOME:$JAVA_HOME/bin:$KOTLIN_HOME:$KOTLIN_HOME/bin:$GRADLE_HOME:$GRADLE_HOME/bin:$MAVEN_HOME/bin:$LOCAL_BIN:$STACK_HOME:$C_INCLUDE_PATH:$RUBY_BIN"
 
 # AUTOSUGGESTION
 # Suggestion Highlight Style
@@ -100,3 +104,7 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/mdssjc/.sdkman"
+[[ -s "/home/mdssjc/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mdssjc/.sdkman/bin/sdkman-init.sh"
