@@ -1,6 +1,6 @@
-#[user]
-#	name = <your name>
-#	email = <your e-mail>
+[user]
+	name = <your name>
+	email = <your e-mail>
 [color]
 	ui = true
 	branch = auto
@@ -12,3 +12,5 @@
 	autocrlf = input
 [alias]
 	lol = log --graph --oneline --decorate --color --all
+[github]
+	user = <your username>
