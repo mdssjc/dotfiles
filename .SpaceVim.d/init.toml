@@ -41,3 +41,6 @@ name = 'sudo'
 [[layers]]
 name = 'tools'
 
+[[layers]]
+name = "lang#clojure"
+
